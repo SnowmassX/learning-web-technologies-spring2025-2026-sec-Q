@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Name</h2>
+    <input type="text" id="username"> <br><br>
+    <input type="submit" value="Submit" id="btn">
+    <p id="p"></p>
+    <script>
+        let username = document.getElementById('username');
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', check);
+        function check(){
+            if(username.value != "" && username.value.length >= 2 ){
+                document.getElementById('p');
+                p.innerHTML = username.value;
+            }
+            else{
+                document.getElementById('p');
+                p.innerHTML = "cant";
+                
+            }
+        };
+    </script>
+</body>
+</html>
