@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>User</title>
+</head>
+
+<body>
+
+  <form onsubmit="return validateUser()">
+    User ID: <input type="text" id="userid"><br><br>
+    Picture: <input type="file" id="pic"><br><br>
+    <input type="submit">
+  </form>
+
+  <script>
+    function validateUser() {
+      let userid = document.getElementById("userid").value;
+      let pic = document.getElementById("pic").value;
+
+      if (userid === "") {
+        alert("User ID cannot be empty");
+        return false;
+      }
+
+      if (isNaN(userid) || Number(userid) <= 0) {
+        alert("User ID must be a positive number");
+        return false;
+      }
+
+      if (pic === "") {
+        alert("Picture cannot be empty");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>

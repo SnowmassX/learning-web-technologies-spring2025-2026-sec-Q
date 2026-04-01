@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Date</title>
+</head>
+
+<body>
+
+  <form onsubmit="return validateDate()">
+    DD: <input type="text" id="dd">
+    MM: <input type="text" id="mm">
+    YYYY: <input type="text" id="yyyy">
+    <input type="submit">
+  </form>
+
+  <script>
+    function validateDate() {
+      let dd = document.getElementById("dd").value;
+      let mm = document.getElementById("mm").value;
+      let yyyy = document.getElementById("yyyy").value;
+
+      if (dd === "" || mm === "" || yyyy === "") {
+        alert("Fields cannot be empty");
+        return false;
+      }
+
+      dd = Number(dd);
+      mm = Number(mm);
+      yyyy = Number(yyyy);
+
+      if (dd < 1 || dd > 31) {
+        alert("Invalid day");
+        return false;
+      }
+
+      if (mm < 1 || mm > 12) {
+        alert("Invalid month");
+        return false;
+      }
+
+      if (yyyy < 1900 || yyyy > 2016) {
+        alert("Invalid year");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dropdown</title>
+</head>
+
+<body>
+
+  <form onsubmit="return validateDept()">
+    <select id="dept">
+      <option value="">Select</option>
+      <option value="CSE">CSE</option>
+      <option value="EEE">EEE</option>
+    </select>
+    <input type="submit">
+  </form>
+
+  <script>
+    function validateDept() {
+      let dept = document.getElementById("dept").value;
+
+      if (dept === "") {
+        alert("Must select an option");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>
