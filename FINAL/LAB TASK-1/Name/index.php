@@ -1,5 +1,8 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "Name (Handler Page): " . $_POST['name'];
+if (isset($_REQUEST['submit'])) {
+    $name = $_REQUEST['name'];
+    echo $name; 
 }
+else
+    echo "no data";
 ?>

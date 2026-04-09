@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lab 3.1 - Name Form</title>
+    <title>Name Form</title>
 </head>
 <body>
 
@@ -9,7 +9,7 @@
         <legend>NAME (A)</legend>
         <form method="post" action="index.php">
             <input type="text" name="name"><br><hr>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" name="submit">
         </form>
     </fieldset>
 
