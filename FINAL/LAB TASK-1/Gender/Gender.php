@@ -6,7 +6,7 @@
 </head>
 <body>
     <fieldset>
-        <legend>Gender (A)</legend>
+        <legend>GENDER (A)</legend>
         <form action="index.php" method ="post" >
             <input type="radio" name="gender" value="Male"> Male
             <input type="radio" name="gender" value="Female"> Female
@@ -16,7 +16,7 @@
     </fieldset>
     <br>
     <fieldset>
-        <legend>Gender (A)</legend>
+        <legend>GENDER (B)</legend>
         <form action="" method ="post" >
             <input type="radio" name="gender_b" value="Male"> Male
             <input type="radio" name="gender_b" value="Female"> Female
@@ -38,18 +38,21 @@
         }
     ?>
     <fieldset>
-        <legend>Gender (A)</legend>
-        <form action="" method ="post" value="<?php echo $retainedGender;?>">
-            <input type="radio" name="gender_c" value="Male"> Male
-            <input type="radio" name="gender_c" value="Female"> Female
-            <input type="radio" name="gender_c" value="Other"> Other <br><hr>
+        <legend>GENDER (C)</legend>
+        <form action="" method ="post" >
+            <input type="radio" name="gender_c" value="Male"
+                <?php if ($retainedGender == "Male") echo "checked"; ?>> Male
+
+            <input type="radio" name="gender_c" value="Female"
+                <?php if ($retainedGender == "Female") echo "checked"; ?>> Female
+
+            <input type="radio" name="gender_c" value="Other"
+                <?php if ($retainedGender == "Other") echo "checked"; ?>> Other <br><hr>
             <input type="submit" name="submit_c">
         </form>
         <?php
             if(isset($_REQUEST['submit_c'])){
-            echo $retainedGender;
-            
-               
+            echo $retainedGender;           
         }
         ?>
     </fieldset>
