@@ -16,10 +16,10 @@
         <legend>Registration</legend>
         <form action="" method="post">
             Name : <input type="text" name="name"><br>
-            Email : <input type="email" name="name"><br>
-            User Name : <input type="text" name="name"><br>
-            Password : <input type="password" name="name"><br>
-            Confirm Password : <input type="confirm password" name="name"><br>
+            Email : <input type="email" name="email"><br>
+            User Name : <input type="text" name="username"><br>
+            Password : <input type="password" name="password"><br>
+            Confirm Password : <input type="password" name="confirmpassword"><br>
             Gender <br>
             <fieldset>
                 <legend>Gender</legend>
@@ -29,7 +29,7 @@
             </fieldset>
             <fieldset>
                 <legend>Date of Birth</legend>
-                <input type="date" name="name"><br>
+                <input type="date" name="date"><br>
             
             </fieldset>
             <input type="submit" name="submit">
@@ -42,3 +42,38 @@
     </footer>
 </body>
 </html>
+<?php
+session_start();
+
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $confirmpassword = $_POST['confirmpassword'];
+    $gender = $_POST['gender'] ?? "";
+    $date = $_POST['date'];
+
+    if($name == "" || $password == "" || $username == "" || $email == "" || $date == "" || $confirmpassword == "" || $gender == ""){
+        echo "All fields required!";
+    }
+    elseif($password != $confirmpassword){
+        echo "Password does not match!";
+    }
+    else{
+        $user = [
+            "name" => $name,
+            "email" => $email,
+            "username" => $username,
+            "password" => $password,
+            "gender" => $gender,
+            "date" => $date
+        ];
+
+        $_SESSION['users'][] = $user;
+
+        echo "Registration Successful!";
+        header('location: login.php');
+    }
+}
+?>
