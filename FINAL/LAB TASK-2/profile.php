@@ -26,7 +26,7 @@ $user = $_SESSION['current_user'];
 <a href="dashboard.php">Dashboard</a> |
 <a href="profile.php">View Profile</a> |
 <a href="edit_profile.php">Edit Profile</a> |
-<a href="change_profile_picture.php">Change Profile Picture</a> |
+<a href="edit_profile_picture.php">Change Profile Picture</a> |
 <a href="change_password.php">Change Password</a>
 
 <fieldset>
@@ -35,6 +35,8 @@ $user = $_SESSION['current_user'];
     Email : <?= $user['email'] ?><br><hr>
     Gender : <?= $user['gender'] ?><br><hr>
     Date of Birth : <?= $user['date'] ?><br><hr>
+    <img src="uploads/<?= $user['photo'] ?? 'uploads/download.png' ?>" width="100"><br><br>
+
 </fieldset>
 
 <footer>

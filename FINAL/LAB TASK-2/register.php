@@ -67,7 +67,8 @@ if(isset($_POST['submit'])){
             "username" => $username,
             "password" => $password,
             "gender" => $gender,
-            "date" => $date
+            "date" => $date,
+            "photo" => 'uploads/download.png'
         ];
 
         $_SESSION['users'][] = $user;
