@@ -23,8 +23,8 @@
         </form>
 
         <?php
-        if (isset($_POST['submit_b'])) {
-            echo $_POST['name_b'];
+        if (isset($_REQUEST['submit_b'])) {
+            echo $_REQUEST['name_b'];
         }
         ?>
     </fieldset>
@@ -33,8 +33,8 @@
 
     <?php
     $retainedName = "";
-    if (isset($_POST['submit_c'])) {
-        $retainedName = $_POST['name_c'];
+    if (isset($_REQUEST['submit_c'])) {
+        $retainedName = $_REQUEST['name_c'];
     }
     ?>
 
@@ -46,7 +46,7 @@
         </form>
 
         <?php
-        if (isset($_POST['submit_c'])) {
+        if (isset($_REQUEST['submit_c'])) {
             echo $retainedName;
         }
         ?>
