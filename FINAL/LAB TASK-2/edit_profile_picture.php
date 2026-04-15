@@ -26,11 +26,11 @@ $user = $_SESSION['current_user'];
 <a href="dashboard.php">Dashboard</a> |
 <a href="profile.php">View Profile</a> |
 <a href="edit_profile.php">Edit Profile</a> |
-<a href="edit_profile_picture.php">Change Profile Picture</a> |
+<a href="change_profile_picture.php">Change Profile Picture</a> |
 <a href="change_password.php">Change Password</a>
 
 <fieldset>
-    <legend>EDIT PROFILE</legend>
+    <legend>PROFILE PICTURE</legend>
     <img src="" alt="profile picture"><br>
     <input type="file" name="file"><br><hr>
     <input type="submit" name="submit">

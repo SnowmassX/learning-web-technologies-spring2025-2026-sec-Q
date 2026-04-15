@@ -32,7 +32,6 @@ session_start();
 
 if(isset($_POST['submit'])){
 
-    // prevent error if no users
     if(!isset($_SESSION['users'])){
         echo "No users registered!";
         exit();
@@ -46,13 +45,12 @@ if(isset($_POST['submit'])){
             $_SESSION['current_user'] = $u;
             $found = true;
 
-            // COOKIE (Remember Me)
             if(isset($_POST['remember_me'])){
-                setcookie("username", $_POST['name'], time()+3600); // 1 hour
+                setcookie("username", $_POST['name'], time()+3600, '/');
             }
-
+ 
             header("Location: dashboard.php");
-            exit(); // VERY IMPORTANT
+            exit();
         }
     }
 
