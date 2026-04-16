@@ -35,7 +35,7 @@ $user = $_SESSION['current_user'];
     Email : <?= $user['email'] ?><br><hr>
     Gender : <?= $user['gender'] ?><br><hr>
     Date of Birth : <?= $user['date'] ?><br><hr>
-    <img src="uploads/<?= $user['photo'] ?? 'uploads/download.png' ?>" width="100"><br><br>
+    <img src="uploads/<?= $user['photo']  ?>" width="100"><br><br>
 
 </fieldset>
 
