@@ -8,7 +8,6 @@ if(!isset($_SESSION['current_user'])){
 
 if(isset($_POST['submit'])){
 
-    // update current_user
     $_SESSION['current_user']['name'] = $_POST['name'];
     $_SESSION['current_user']['email'] = $_POST['email'];
     $_SESSION['current_user']['gender'] = $_POST['gender'];
