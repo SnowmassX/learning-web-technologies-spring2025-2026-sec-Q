@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
 
             
  
-            header('Location: ../view/prodcuts.php');
+            header('Location: ../view/products.php');
             exit();
         }
     }

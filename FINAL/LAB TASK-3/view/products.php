@@ -3,11 +3,11 @@
     session_start();
     
     $products = [
-            ['id'=>1, 'name'=>'alamin', 'email'=>'alamin@aiub.edu'],
-            ['id'=>2, 'name'=>'xyz', 'email'=>'alamin@aiub.edu'],
-            ['id'=>3, 'name'=>'abc', 'email'=>'alamin@aiub.edu'],
-            ['id'=>4, 'name'=>'pqr', 'email'=>'alamin@aiub.edu'],
-            ['id'=>5, 'name'=>'zzz', 'email'=>'alamin@aiub.edu']
+            ['id'=>1, 'name'=>'tea'],
+            ['id'=>2, 'name'=>'biscuit'],
+            ['id'=>3, 'name'=>'water'],
+            ['id'=>4, 'name'=>'soap'],
+            ['id'=>5, 'name'=>'shampoo']
     ];
     $_SESSION['products']= $products;
 
@@ -29,7 +29,7 @@
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Email</th>
+            
             <th>Action</th>
         </tr>
 
@@ -37,8 +37,8 @@
 
         <tr>
             <td><?php echo $product['id'];?></td>
-            <td><?php echo $product['name'];?></td>
-            <td><?=$product['email']?></td>
+            
+            <td><?=$product['name']?></td>
             <td>
                 <a href="edit.php?id=<?=$product['id']?>">EDIT </a> |
                 <a href="delete.php">DELETE </a> |
