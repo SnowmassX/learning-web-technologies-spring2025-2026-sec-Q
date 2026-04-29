@@ -22,9 +22,9 @@
         <a href='../controller/logout.php'>Logout</a>
         <br>
 
-        <form method="post" action="../controller/update.php" enctype="">
-            ID: <input type="text" name="username" readonly value="<?=$user['id']?>"/> <br>
-            NAME: <input type="text" name="username" value="<?=$user['name']?>"/> <br>
+        <form method="post" action="../controller/edit.php" enctype="">
+            ID: <input type="text" name="username" readonly value="<?=$product['id']?>"/> <br>
+            NAME: <input type="text" name="name" value="<?=$product['name']?>"/> <br>
             
             <input type="submit" name="submit" value="Submit"/>
         </form>
