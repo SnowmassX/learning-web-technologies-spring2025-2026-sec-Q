@@ -7,6 +7,9 @@
 </head>
 
 <body>
+    <a href="login.php">login</a>
+    <a href="register.php">register</a>
+    <a href="home.php">home</a>
     <fieldset>
         <legend>Register</legend>
         <form action="../Controller/registration.php" method="post">

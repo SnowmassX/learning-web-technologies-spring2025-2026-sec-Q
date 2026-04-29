@@ -1,7 +1,6 @@
 <?php
 require_once('db.php');
 
-echo "test";
 function login($user){
     $con = getConnection();
     $sql = "select * from user where password='{$user['Password']}' and email='{$user['Email']}'";

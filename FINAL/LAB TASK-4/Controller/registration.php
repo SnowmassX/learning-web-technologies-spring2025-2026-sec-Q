@@ -1,4 +1,4 @@
-<?
+<?php
     require_once('../Model/userModel.php');
     if(isset($_REQUEST['submit'])){
         $name = $_REQUEST['name'];
@@ -11,13 +11,13 @@
             $user = ['Name'=>$name, 'Password'=>$password, 'Email'=>$email];
             $status = addUser($user);
             if($status){
-               
+                setcookie('status', 'true', time()+3000, '/');
                 header('location: ../View/login.php');
             }else{
                 header('location: ../View/register.php');
             }
         }
     }else{
-        header('location: ../View/login.php');
+        header('location: ../View/home.php');
     } 
 ?>

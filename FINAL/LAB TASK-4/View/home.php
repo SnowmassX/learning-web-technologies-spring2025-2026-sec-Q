@@ -5,6 +5,9 @@
     <title>Home</title>
 </head>
 <body>
+    <a href="login.php">login</a>
+    <a href="register.php">register</a>
+    <a href="home.php">home</a>
     welcome home
 </body>
 </html>
