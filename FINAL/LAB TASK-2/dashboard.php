@@ -37,3 +37,6 @@ $user = $_SESSION['current_user'];
 
 </body>
 </html>
+<style>
+    
+</style>
