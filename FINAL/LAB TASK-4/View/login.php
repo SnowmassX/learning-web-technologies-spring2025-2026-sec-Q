@@ -8,6 +8,7 @@
     <a href="login.php">login</a>
     <a href="register.php">register</a>
     <a href="home.php">home</a>
+    <a href="../Controller/logout.php">logout</a>
     <fieldset>
         <legend>Login</legend>
         <form action="../Controller/loginCheck.php" method="post">
