@@ -14,5 +14,6 @@
             <input type="submit" name="submit">
         </form>
     </fieldset>
+    <a href="userList.php">Back</a>
 </body>
 </html>

@@ -13,5 +13,6 @@
             "password"=> $password
         ];
         addUser($user);
+        header("location: ../view/userList.php");
     }
 ?>

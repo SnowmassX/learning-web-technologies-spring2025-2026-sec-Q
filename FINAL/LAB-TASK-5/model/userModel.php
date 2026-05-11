@@ -12,7 +12,8 @@ function addUser($user)
 }
 function deleteUser($id)
 {
-
+    $con = getConnection();
+    $sql = "delete from employee where id ='$id'";
 }
 function updateUser($user)
 {

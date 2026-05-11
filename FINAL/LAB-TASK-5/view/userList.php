@@ -24,7 +24,7 @@
             $users = displayAll();
             foreach($users as $user){
             ?>
-
+            y
         <tr>
             <td><?php echo $user['id'];?></td>
             <td><?php echo $user['name'];?></td>
@@ -33,7 +33,7 @@
             <td><?=$user['password']?></td>
             <td>
                 <a href="edit.php?id=<?=$user['id']?>">EDIT </a> |
-                <a href="delete.php">DELETE </a> |
+                <a href="../controller/deleteUser.php?id=<?=$user['id']?>">DELETE </a> |
                 <a href="detail.php">DETAILS </a>
             </td>
         </tr>
